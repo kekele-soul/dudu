@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按时间搜索</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            /*background-color: red;*/
+        }
+        #top {
+            width: 100%;
+            height: 120px;
+            background-color: #ff9933;
+        }
+        #topLeft {
+            background: linear-gradient(to right,#009933,#99CC00);
+            width: 310px;
+            height: 120px;
+            /*background-color: gold;*/
+            float: left;
+            text-align: center;
+            margin-top: -60px;
+
+        }
+        #topLeft div{
+            text-align: center;
+            margin-top: 33px;
+            color: #ffffcc;
+
+        }
+
+        #topRight{
+            width: 323px;
+            height: 60px;
+            /*background-color: black;*/
+            float: left;
+        }
+        #topMiddleImg {
+            width: 55%;
+            height: 53px;
+            /*background-color: white;*/
+            float: left;
+            margin-top: -60px;
+        }
+        div img {
+            width: 100%;
+            height: 120px;
+        }
+        #middle{
+            margin-top: 20px;
+            height: 1500px;
+            width: 100%;
+            /*background-color: blue;*/
+        }
+        #middleLeft {
+            background: linear-gradient(to right,#cc3399,#ff9933);
+            box-shadow: gray 0px 0px 10px ;
+            height: 100px;
+            width: 19.8%;
+            /*background-color: red;*/
+            float: left;
+            /*border-right: 3px black solid;*/
+        }
+        #middleLeft div{
+            text-align: center;
+            margin-top: 33px;
+        }
+        #middleMain {
+            background: linear-gradient(to left,#cc3399,#ff9933);
+            text-indent: 2em;
+            height: 100px;
+            width: 80%;
+            float: left;
+            /*background-color: red;*/
+            color: indigo;
+            box-shadow: gray 0px 0px 10px ;
+        }
+        #middleMain div{
+            margin-top: 15px;
+        }
+        #button {
+            height: 25px;
+            width: 100%;
+            background-color: mediumturquoise;
+            color:red;
+            text-align: center;
+        }
+        #mmp{
+            background: linear-gradient(to top,#009933,#99CC00);
+            width: 373px;
+            height: 50%;
+            /*background-color: greenyellow;*/
+            /*float: right;*/
+            margin-right: 0;
+            text-align: center;
+            text-decoration: none;
+        }
+        #mmp a{
+            color: blue;
+            line-height: 50px;
+            text-decoration: none;
+        }
+        #cnm{
+            background: linear-gradient(to top,#009933,#99CC00);
+            width: 373px;
+            height: 50%;
+            /*background-color: mediumspringgreen;*/
+            /*margin-top: 50px;*/
+            float: right;
+            text-align: center;
+        }
+        #cnm a{
+            color: blue;
+            line-height: 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   <div id="top">
+       <div id="mmp">
+   <a href="random.html"><h3>随机笑话</h3></a>
+       </div>
+       <div id="cnm">
+           <a href="new.html"><h3>最新笑话</h3></a>
+       </div>
+       <div id="topLeft">
+           <div>
+               <i><h2>更新时间顺序</h2></i>
+           </div>
+       </div>
+       <div id="topMiddleImg">
+           <img src="img/top1.gif">
+       </div>
+       <div id="topRight">
+
+       </div>
+   </div>
+    <div id="middle">
+        {{ range .Content}}
+        <div id="middleLeft">
+          <div>
+              更新时间是：{{.Updatetime}}
+          </div>
+        </div>
+        <div id="middleMain">
+            <div>{{.Content}}</div>
+        </div>
+          {{end}}}
+    </div>
+    <div id="button">
+        &copy;开发商已经破产
+    </div>
+</body>
+</html>

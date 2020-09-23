@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--防盗连接-->
+{{/*    <meta name="referrer" content="no-referrer">*/}}
+    <title>物品栏</title>
+    <link rel="stylesheet" href="article.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 14px;
+            font-family: "微软雅黑", "Times New Roman";
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+{{/*{{range .AdhguhgSilce}}*/}}
+    <div>
+     <table class="tab">
+         <tr>
+             <th>物品信息</th>
+         </tr>
+         <tr>
+             <td>物品名称：</td>
+             <td>{{.Name}}</td>
+         </tr>
+         <tr>
+             <td>图片：</td>
+             <td>{{.IconPath}}</td>
+         </tr>
+         <tr>
+             <td>物品属性：</td>
+
+             <td>{{.Plaintext}}
+             </td>
+         </tr>
+     </table>
+    </div>
+{{/*{{end}}*/}}
+<script>
+
+</script>
+</body>
+</html>

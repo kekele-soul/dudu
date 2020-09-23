@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按时间搜索</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            /*background-color: red;*/
+        }
+        #top {
+            width: 100%;
+            height: 120px;
+            background-color: blue;
+        }
+        #topLeft {
+            width: 310px;
+            height: 120px;
+            background-color: gold;
+            float: left;
+            text-align: center;
+            margin-top: -60px;
+
+        }
+        #topLeft div{
+            text-align: center;
+            margin-top: 33px;
+
+        }
+        #mmp a{
+            margin-top: 15px;
+
+        }
+        #topRight{
+            width: 323px;
+            height: 60px;
+            /*background-color: black;*/
+            float: left;
+        }
+        #topMiddleImg {
+            width: 52%;
+            height: 53px;
+            /*background-color: white;*/
+            float: left;
+            margin-top: -60px;
+        }
+        div img {
+            width: 100%;
+            height: 120px;
+        }
+        #middle{
+            height: 1500px;
+            width: 100%;
+            /*background-color: blue;*/
+        }
+        #middleLeft {
+            box-shadow: gray 0px 0px 10px ;
+            height: 100px;
+            width: 19.8%;
+            /*background-color: red;*/
+            float: left;
+            border-right: 3px black solid;
+        }
+        #middleLeft div{
+            text-align: center;
+            margin-top: 33px;
+        }
+        #middleMain {
+            text-indent: 2em;
+            height: 100px;
+            width: 79.8%;
+            float: left;
+            /*background-color: red;*/
+            color: indigo;
+            box-shadow: gray 0 0 10px ;
+
+        }
+        #middleMain div{
+            margin-top: 15px;
+        }
+
+        #mmp{
+            width: 389.5px;
+            height: 50%;
+            background-color: greenyellow;
+            /*float: right;*/
+            margin-right: 0;
+            text-align: center;
+        }
+        #cnm{
+            width: 389px;
+            height: 50%;
+            background-color: mediumspringgreen;
+            /*margin-top: 50px;*/
+            float: right;
+            text-align: center;
+        }
+        #hover a{
+            color: orangered;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   <div id="top">
+       <div id="mmp">
+   <a href="random.html"><h3>随机笑话</h3></a>
+       </div>
+       <div id="cnm">
+           <a href="new.html"><h3>最新笑话</h3></a>
+       </div>
+       <div id="topLeft">
+           <div>
+               <h2>按更新时间搜索数据</h2>
+           </div>
+       </div>
+       <div id="topMiddleImg">
+           <img src="img/top.gif">
+       </div>
+
+   </div>
+    <div id="middle">
+        {{range .Result.Data}}
+        <div id="middleLeft">
+          <div>
+              更新时间是：{{.Updatetime}}<br>
+          </div>
+        </div>
+        <div id="middleMain">
+
+            <div>
+                    {{.Content}}<br>
+            </div>
+        </div>
+        {{end}}
+    </div>
+    <div align="center">
+        &copy;开发商已经破产
+    </div>
+</body>
+</html>
+
+
+
+{{/*<!DOCTYPE html>*/}}
+{{/*<html lang="en">*/}}
+{{/*<head>*/}}
+{{/*    <meta charset="UTF-8">*/}}
+{{/*    <title>测试-按时间查寻</title>*/}}
+{{/*    <style>*/}}
+{{/*        #middle {*/}}
+{{/*            border: red 2px solid;*/}}
+{{/*            height: 500px;*/}}
+{{/*            width: 100%;*/}}
+{{/*        }*/}}
+
+{{/*        #middleLeft {*/}}
+{{/*            border: black 2px solid;*/}}
+{{/*            height: 150px;*/}}
+{{/*            width: 100%;*/}}
+{{/*        }*/}}
+
+{{/*        #time {*/}}
+{{/*            border: darkorange 2px solid;*/}}
+{{/*            height:30px;*/}}
+{{/*            width:25%;*/}}
+{{/*        }*/}}
+{{/*    </style>*/}}
+{{/*</head>*/}}
+{{/*<body>*/}}
+{{/*{{ .Result}}*/}}
+{{/*    <div id="middle">*/}}
+{{/*        {{range .}}*/}}
+{{/*            <div id="middleLeft">*/}}
+
+{{/*                <span id="time">更新时间是：{{.Updatetime}}</span>*/}}
+
+{{/*            </div>*/}}
+
+{{/*            <div id="middleMain">*/}}
+{{/*                <div>{{.Content}}</div>*/}}
+{{/*            </div>*/}}
+{{/*        {{end}}*/}}
+{{/*    </div>*/}}
+
+{{/*    <div id="button">*/}}
+{{/*        &copy;开发商已经破产*/}}
+{{/*    </div>*/}}
+{{/*</body>*/}}
+{{/*</html>*/}}
